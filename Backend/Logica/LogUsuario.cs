@@ -102,7 +102,7 @@ namespace Backend.Logica
                 }
                 else
                 {
-                    //LLEGARON TODOS LOS DATOS
+                    //LLEGARON TODOS LOS DATOS p
                     //Enviar a base de datos
                     int? errorId = 0;
                     int? idReturn = 0;//idusuario
