@@ -11,7 +11,7 @@ namespace Backend.Logica
     public class LogSession
     {
 
-        public Session obtenerSession(String session) {
+        public static Session obtenerSession(String session) {
             Session objetoSession = new Session();
             int? errorId = 0;
             int? idReturn = 0;//idusuario
@@ -23,6 +23,11 @@ namespace Backend.Logica
             {
                 //Agregar resto de campos 
                 objetoSession.SessionId = sessionLinq.SESSION_ID;
+                objetoSession.Session_User_Id = sessionLinq.SESSION_USER_ID;
+                objetoSession.SessionCod = sessionLinq.SESSION;
+                objetoSession.Session_Fecha_Inicio = (DateTime)sessionLinq.SESSION_FECHA_INICIO;
+                objetoSession.Session_Fecha_Final = (DateTime)sessionLinq.SESSION_FECHA_FINAL;
+                objetoSession.Session_Estado = (bool)sessionLinq.SESSION_ESTADO;
             }
             else
             {
@@ -31,22 +36,23 @@ namespace Backend.Logica
             return objetoSession;
         }
 
-        public Boolean ingresarSession(int idUsuario)
+        public static string ingresarSession(int idUsuario)
         {
             int? errorId = 0;
             int? idReturn = 0;//idusuario
             string errorDescripcion = "";
 
             conexionlinqDataContext miLinq = new conexionlinqDataContext();
+            string session = Guid.NewGuid().ToString();
             miLinq.sp_IngresarSession(idUsuario, Guid.NewGuid().ToString() ,ref idReturn, ref errorId, ref errorDescripcion);
             if (errorId == 0 && idReturn != 0)
             {
                 //Agregar resto de campos 
-                return true;
+                return session;
             }
             else
             {
-                return false;
+                return null;
             }
         }
     }
