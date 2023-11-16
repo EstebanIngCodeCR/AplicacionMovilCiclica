@@ -82,16 +82,6 @@ namespace Backend.AccesoDatos
 			return ((int)(result.ReturnValue));
 		}
 		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.SP_LoginUsuario")]
-		public int SP_LoginUsuario1([global::System.Data.Linq.Mapping.ParameterAttribute(Name="Correo", DbType="VarChar(200)")] string correo, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Contrasena", DbType="VarChar(50)")] string contrasena, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] ref System.Nullable<int> idReturn, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] ref System.Nullable<int> errorId, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(255)")] ref string errorDescripcion)
-		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), correo, contrasena, idReturn, errorId, errorDescripcion);
-			idReturn = ((System.Nullable<int>)(result.GetParameterValue(2)));
-			errorId = ((System.Nullable<int>)(result.GetParameterValue(3)));
-			errorDescripcion = ((string)(result.GetParameterValue(4)));
-			return ((int)(result.ReturnValue));
-		}
-		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.sp_ObtenerSession")]
 		public ISingleResult<sp_ObtenerSessionResult> sp_ObtenerSession([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(MAX)")] string session, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] ref System.Nullable<int> idReturn, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] ref System.Nullable<int> errorId, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(MAX)")] ref string errorDescripcion)
 		{
@@ -109,6 +99,16 @@ namespace Backend.AccesoDatos
 			idReturn = ((System.Nullable<int>)(result.GetParameterValue(2)));
 			errorId = ((System.Nullable<int>)(result.GetParameterValue(3)));
 			errorDescripcion = ((string)(result.GetParameterValue(4)));
+			return ((int)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.sp_CerrarSesionesAntiguas")]
+		public int sp_CerrarSesionesAntiguas([global::System.Data.Linq.Mapping.ParameterAttribute(Name="SESSION", DbType="VarChar(MAX)")] string sESSION, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] ref System.Nullable<int> idReturn, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] ref System.Nullable<int> errorId, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(255)")] ref string errorDescripcion)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), sESSION, idReturn, errorId, errorDescripcion);
+			idReturn = ((System.Nullable<int>)(result.GetParameterValue(1)));
+			errorId = ((System.Nullable<int>)(result.GetParameterValue(2)));
+			errorDescripcion = ((string)(result.GetParameterValue(3)));
 			return ((int)(result.ReturnValue));
 		}
 	}

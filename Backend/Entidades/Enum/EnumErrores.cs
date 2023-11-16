@@ -17,6 +17,7 @@ namespace Backend.Entidades
         ContrasenaFaltante = 005,
         ErrorLogin = 006,
         ErrorSession = 007,
-        SessionFaltante = 008
+        SessionFaltante = 008,
+        SessionCerrada = 099
     }
 }
