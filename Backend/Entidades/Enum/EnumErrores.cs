@@ -25,7 +25,8 @@ namespace Backend.Entidades
         FechaFaltante = 011,
         DuracionCicloFaltante = 012,
         DuracionMenstrualFaltante = 013,
-        FechaNacimientoFaltante = 014,
-        ErrorCicloMenstrual = 015,
+        ErrorCicloMenstrual = 014,
+        ErrorUsuario = 015,
+
     }
 }

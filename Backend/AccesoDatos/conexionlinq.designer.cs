@@ -111,6 +111,16 @@ namespace Backend.AccesoDatos
 			errorDescripcion = ((string)(result.GetParameterValue(3)));
 			return ((int)(result.ReturnValue));
 		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.sp_IngresarRegistroCicloMenstrual")]
+		public int sp_IngresarRegistroCicloMenstrual([global::System.Data.Linq.Mapping.ParameterAttribute(Name="UsuarioID", DbType="Int")] System.Nullable<int> usuarioID, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="FechaInicioCiclo", DbType="Date")] System.Nullable<System.DateTime> fechaInicioCiclo, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="DuracionCiclo", DbType="Int")] System.Nullable<int> duracionCiclo, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="DuracionMenstruacion", DbType="Int")] System.Nullable<int> duracionMenstruacion, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] ref System.Nullable<int> idReturn, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] ref System.Nullable<int> errorId, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(255)")] ref string errorDescripcion)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), usuarioID, fechaInicioCiclo, duracionCiclo, duracionMenstruacion, idReturn, errorId, errorDescripcion);
+			idReturn = ((System.Nullable<int>)(result.GetParameterValue(4)));
+			errorId = ((System.Nullable<int>)(result.GetParameterValue(5)));
+			errorDescripcion = ((string)(result.GetParameterValue(6)));
+			return ((int)(result.ReturnValue));
+		}
 	}
 	
 	public partial class sp_ObtenerSessionResult

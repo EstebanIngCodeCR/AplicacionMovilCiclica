@@ -122,7 +122,7 @@ namespace Backend.Logica
                     {
                         //Exitoso
                         res.resultado = true;
-                        res.session = session;
+                        res.session = session; //No es la misma que la de BD
                     }
                     else
                     {
