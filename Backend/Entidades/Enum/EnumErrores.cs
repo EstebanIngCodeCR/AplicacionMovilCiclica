@@ -27,6 +27,10 @@ namespace Backend.Entidades
         DuracionMenstrualFaltante = 013,
         ErrorCicloMenstrual = 014,
         ErrorUsuario = 015,
+        //Errores de Anticonceptivos
+        AnticonceptivoInexistente = 021,
+        EstadoDeNotifi_0 = 022,
+        SinRegistro = 023,
 
     }
 }

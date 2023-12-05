@@ -56,6 +56,7 @@
     <Compile Include="Entidades\CicloMenstrual.cs" />
     <Compile Include="Entidades\Enum\EnumErrores.cs" />
     <Compile Include="Entidades\Login.cs" />
+    <Compile Include="Entidades\Notifi_Anticoncep.cs" />
     <Compile Include="Entidades\Producto.cs" />
     <Compile Include="Entidades\Request\ReqBase.cs" />
     <Compile Include="Entidades\Request\ReqIngresarCicloMenstrual.cs" />
