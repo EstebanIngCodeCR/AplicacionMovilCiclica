@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Backend.Entidades.Response
+namespace Backend.Entidades
 {
-    internal class ResHistorialAnticonceptivos
+    public class ResHistorialAnticonceptivos : ResBase
     {
     }
 }
