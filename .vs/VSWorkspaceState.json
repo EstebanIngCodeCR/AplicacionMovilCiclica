@@ -5,12 +5,13 @@
     "\\Backend\\AccesoDatos",
     "\\Backend\\Entidades",
     "\\Backend\\Entidades\\Enum",
-    "\\Backend\\Entidades\\Request",
-    "\\Backend\\Entidades\\Response",
-    "\\Backend\\Logica",
-    "\\WebApi",
-    "\\WebApi\\Controllers"
+    "\\Frontend",
+    "\\Frontend\\Platforms",
+    "\\Frontend\\Platforms\\Android",
+    "\\Frontend\\Views",
+    "\\Frontend\\Views\\Controles",
+    "\\Frontend\\Views\\Paginas"
   ],
-  "SelectedNode": "\\Backend\\Logica\\LogUsuario.cs",
+  "SelectedNode": "\\Backend\\AccesoDatos\\conexionlinq.dbml",
   "PreviewInSolutionExplorer": false
 }

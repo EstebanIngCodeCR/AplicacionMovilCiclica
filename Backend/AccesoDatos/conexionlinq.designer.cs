@@ -121,6 +121,26 @@ namespace Backend.AccesoDatos
 			errorDescripcion = ((string)(result.GetParameterValue(6)));
 			return ((int)(result.ReturnValue));
 		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.sp_CerrarSesionActual")]
+		public int sp_CerrarSesionActual([global::System.Data.Linq.Mapping.ParameterAttribute(Name="SESSION_USER_ID", DbType="Int")] System.Nullable<int> sESSION_USER_ID, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] ref System.Nullable<int> idReturn, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] ref System.Nullable<int> errorId, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(255)")] ref string errorDescripcion)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), sESSION_USER_ID, idReturn, errorId, errorDescripcion);
+			idReturn = ((System.Nullable<int>)(result.GetParameterValue(1)));
+			errorId = ((System.Nullable<int>)(result.GetParameterValue(2)));
+			errorDescripcion = ((string)(result.GetParameterValue(3)));
+			return ((int)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.sp_ObtenerCicloMenstrual")]
+		public ISingleResult<sp_ObtenerCicloMenstrualResult> sp_ObtenerCicloMenstrual([global::System.Data.Linq.Mapping.ParameterAttribute(Name="UsuarioID", DbType="Int")] System.Nullable<int> usuarioID, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] ref System.Nullable<int> idReturn, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] ref System.Nullable<int> errorId, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(255)")] ref string errorDescripcion)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), usuarioID, idReturn, errorId, errorDescripcion);
+			idReturn = ((System.Nullable<int>)(result.GetParameterValue(1)));
+			errorId = ((System.Nullable<int>)(result.GetParameterValue(2)));
+			errorDescripcion = ((string)(result.GetParameterValue(3)));
+			return ((ISingleResult<sp_ObtenerCicloMenstrualResult>)(result.ReturnValue));
+		}
 	}
 	
 	public partial class sp_ObtenerSessionResult
@@ -234,6 +254,104 @@ namespace Backend.AccesoDatos
 				if ((this._SESSION_ESTADO != value))
 				{
 					this._SESSION_ESTADO = value;
+				}
+			}
+		}
+	}
+	
+	public partial class sp_ObtenerCicloMenstrualResult
+	{
+		
+		private int _MENSTRUACION_ID;
+		
+		private int _USUARIO_ID;
+		
+		private System.Nullable<System.DateTime> _CICMENS_FECHA_INICIO_CICLO;
+		
+		private int _CICMENS_DURACION_CICLO;
+		
+		private int _CICMENS_DURACION_MENSTRUACION;
+		
+		public sp_ObtenerCicloMenstrualResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MENSTRUACION_ID", DbType="Int NOT NULL")]
+		public int MENSTRUACION_ID
+		{
+			get
+			{
+				return this._MENSTRUACION_ID;
+			}
+			set
+			{
+				if ((this._MENSTRUACION_ID != value))
+				{
+					this._MENSTRUACION_ID = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_USUARIO_ID", DbType="Int NOT NULL")]
+		public int USUARIO_ID
+		{
+			get
+			{
+				return this._USUARIO_ID;
+			}
+			set
+			{
+				if ((this._USUARIO_ID != value))
+				{
+					this._USUARIO_ID = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CICMENS_FECHA_INICIO_CICLO", DbType="Date")]
+		public System.Nullable<System.DateTime> CICMENS_FECHA_INICIO_CICLO
+		{
+			get
+			{
+				return this._CICMENS_FECHA_INICIO_CICLO;
+			}
+			set
+			{
+				if ((this._CICMENS_FECHA_INICIO_CICLO != value))
+				{
+					this._CICMENS_FECHA_INICIO_CICLO = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CICMENS_DURACION_CICLO", DbType="Int NOT NULL")]
+		public int CICMENS_DURACION_CICLO
+		{
+			get
+			{
+				return this._CICMENS_DURACION_CICLO;
+			}
+			set
+			{
+				if ((this._CICMENS_DURACION_CICLO != value))
+				{
+					this._CICMENS_DURACION_CICLO = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CICMENS_DURACION_MENSTRUACION", DbType="Int NOT NULL")]
+		public int CICMENS_DURACION_MENSTRUACION
+		{
+			get
+			{
+				return this._CICMENS_DURACION_MENSTRUACION;
+			}
+			set
+			{
+				if ((this._CICMENS_DURACION_MENSTRUACION != value))
+				{
+					this._CICMENS_DURACION_MENSTRUACION = value;
 				}
 			}
 		}

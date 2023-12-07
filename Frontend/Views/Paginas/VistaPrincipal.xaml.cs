@@ -1,3 +1,4 @@
+using Frontend.Views.Paginas;
 using System.Globalization;
 
 namespace Frontend.Views;
@@ -23,5 +24,10 @@ public partial class VistaPrincipal : ContentPage
     private void CalendarView_DateSelectionChanged(object sender, EventArgs e)
     {
         DisplayAlert("Date change", Calendar.CurrentEra.ToString(), "Ok");
+    }
+
+    private void Button_Biomarcadores(object sender, EventArgs e)
+    {
+        Navigation.PushAsync(new Biomarcadores());
     }
 }

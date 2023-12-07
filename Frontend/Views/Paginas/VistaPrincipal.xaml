@@ -64,7 +64,8 @@
                         WidthRequest="300"
                         HeightRequest="60"
                         CornerRadius="55"
-                        Text="Registro diario"
+                        Text="Biomarcadores"
+                        Clicked="Button_Biomarcadores"        
                         FontFamily="Verahb"
                         FontSize="20"
                         TextColor="#b01d2e"/>

@@ -3,6 +3,7 @@ using Backend.Entidades;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 using static System.Collections.Specialized.BitVector32;
@@ -60,7 +61,7 @@ namespace Backend.Logica
                 return null;
             }
         }
-         //Metodo del profe que da error
+
           public static Boolean ErroresSession(String session)
           {
             if (string.IsNullOrEmpty(session))
@@ -108,6 +109,36 @@ namespace Backend.Logica
 
                 return laSesionDevolver;
             }
+        }
+
+        public static Boolean cerrarSession(String session) 
+        {
+            Session cerrarSession = new Session();
+            try
+            {
+                int? errorId = 0;
+                int? idReturn = 0;//idusuario
+                string errorDescripcion = "";
+                //checkear si es req.session o solo session
+                int? userId = LogSession.obtenerSession(session).Session_User_Id;
+
+                conexionlinqDataContext miLinq = new conexionlinqDataContext();
+                miLinq.sp_CerrarSesionActual(userId,  ref idReturn, ref errorId, ref errorDescripcion);
+                if (errorId == 0)
+                {
+                    return true;
+                }
+                else 
+                {
+                    return false;   
+                }
+            }
+            catch(Exception e)
+            {
+                Console.WriteLine(e.StackTrace);
+                return false;
+            }
+            
         }
     }
 }
