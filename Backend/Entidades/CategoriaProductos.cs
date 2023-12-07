@@ -6,11 +6,12 @@ using System.Threading.Tasks;
 
 namespace Backend.Entidades
 {
-    public class Carrito
+    public class CategoriaProductos
     {
-        public int idCarrito { get; set; }
-        public int idUsuario { get; set; }
+        public int idCategoriaProducto { get; set; }
+        public int nombre { get; set; }
+        public int descripcion { get; set; }
         public int idProducto { get; set; }
-        public int cantidad { get; set; }
+
     }
 }
