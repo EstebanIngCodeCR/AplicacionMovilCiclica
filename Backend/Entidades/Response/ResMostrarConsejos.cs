@@ -8,6 +8,6 @@ namespace Backend.Entidades
 {
     public class ResMostrarConsejos : ResBase
     {
-
+        public List<Consejos> MostrarLosConsejos { get; set; }
     }
 }

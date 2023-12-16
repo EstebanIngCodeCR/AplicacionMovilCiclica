@@ -8,6 +8,7 @@ namespace Backend.Entidades
 {
     public class ReqInsertarNotificaciones : ReqBase
     {
-        public Notifi_Anticoncep IngresaNotifiAnticoncep { get; set; }
+        public Notificaciones notifiAnticoncep { get; set; }
+       // public Anticonceptivos Anticoncep { get; set; }
     }
 }

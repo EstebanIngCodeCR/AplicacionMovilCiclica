@@ -6,8 +6,9 @@ using System.Threading.Tasks;
 
 namespace Backend.Entidades
 {
-    public class ResObtenerAnticonceptivos : ResBase
+    public class Consejos
     {
-        public List<Anticonceptivos> ListaDeAnticoncepDatos { get; set; }
+            public int Consj_ID { get; set; }
+            public string Consj_Consejo { get; set; }
     }
 }

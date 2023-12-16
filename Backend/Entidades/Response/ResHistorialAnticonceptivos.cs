@@ -8,5 +8,6 @@ namespace Backend.Entidades
 {
     public class ResHistorialAnticonceptivos : ResBase
     {
+        public List<Notifi_Anticonceptivos> HistorialAnticonceptivo { get; set; }
     }
 }
