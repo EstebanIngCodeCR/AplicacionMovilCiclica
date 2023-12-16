@@ -116,13 +116,12 @@ namespace Backend.Logica
                     miLinq.SP_LoginUsuario(req.userLog.correo, req.userLog.contrasena, ref idReturn, ref errorId, ref errorDescripcion);
 
                     string session = LogSession.ingresarSession((int)idReturn);
-
-                    //Validar correo , contrasena y  **si la session se creo
-                    if (errorId == 0 && idReturn != 0 && session != null)
+          
+                    if (errorId == 0 && idReturn != 0 && session != null) //Validar correo , contrasena y  **si la session se creo
                     {
                         //Exitoso
                         res.resultado = true;
-                        res.session = session; //No es la misma que la de BD
+                        res.session = session; 
                     }
                     else
                     {
