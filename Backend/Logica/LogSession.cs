@@ -111,7 +111,7 @@ namespace Backend.Logica
             }
         }
 
-        public static Boolean cerrarSession(String session) 
+        /*public static Boolean cerrarSession(String session) 
         {
             Session cerrarSession = new Session();
             try
@@ -139,6 +139,6 @@ namespace Backend.Logica
                 return false;
             }
             
-        }
+        }*/
     }
 }

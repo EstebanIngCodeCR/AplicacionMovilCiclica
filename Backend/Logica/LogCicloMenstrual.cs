@@ -9,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Backend.Logica
-{
+{/*
     public class LogCicloMenstrual
     {
         public ResIngresarCicloMenstrual IngresarCicloMenstrual(ReqIngresarCicloMenstrual req)
@@ -136,7 +136,7 @@ namespace Backend.Logica
 
             return listaDevolver;
         }
+           
 
-
-    }
+    }*/
 }
